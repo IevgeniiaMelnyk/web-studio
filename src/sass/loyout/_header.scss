@@ -56,10 +56,11 @@
     cursor: pointer;
     color: var(--text-color);
     @include font($fs: 20px, $lh: 27px);
+    transition: all 250ms var(--time-function);
 
     &:hover,
     &:focus {
-      @include title-color-activ();
+      color: var(--button-border-color);
       filter: drop-shadow(var(--drop-shadow));
       outline-color: var(--button-border-color);
       text-shadow: var(--text-shadow);

@@ -14,10 +14,6 @@
     background: linear-gradient(132.64deg, #161919 2.37%, #373a3a 100.31%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
     transition: opacity 250ms var(--time-function),
       visibolity 250ms var(--time-function),
       transform 500ms var(--time-function);
@@ -29,8 +25,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     @include title-color-activ();
-
     @include font($fw: 600, $fs: 20px, $lh: 24px);
+    transition: all 250ms var(--time-function);
 
     &:hover,
     &:focus {
@@ -48,8 +44,13 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-
     left: 50%;
     transform: translate(-50%, 0);
+  }
+
+  .mobile-menu.is-close {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }

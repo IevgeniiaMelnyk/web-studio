@@ -4,9 +4,15 @@ const refs = {
     menu: document.querySelector('.mobile-menu'),
 };
 
-refs.openMenuBtn.addEventListener('click', toggleMenu);
-refs.closeMenuBtn.addEventListener('click', toggleMenu);
+refs.openMenuBtn.addEventListener('click', mobimeMenuIsOpen);
+refs.closeMenuBtn.addEventListener('click', mobimeMenuIsClose);
 
- function toggleMenu() {
-    refs.menu.classList.toggle('is-open');
-  }
+function mobimeMenuIsOpen() {
+  refs.menu.classList.remove('is-close')
+  refs.menu.classList.add('is-open');
+}
+
+function mobimeMenuIsClose() {
+  refs.menu.classList.remove('is-open');
+  setTimeout(() => { refs.menu.classList.add('is-close'); console.log('bvb') }, 500);
+}
