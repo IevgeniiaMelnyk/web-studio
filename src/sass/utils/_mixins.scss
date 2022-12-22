@@ -1,0 +1,25 @@
+@mixin title-color-activ() {
+  background: linear-gradient(91.2deg, #b5feef 10.31%, #2eecc5 165.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin title-color() {
+  background: linear-gradient(
+    91.2deg,
+    rgba(181, 254, 239, 0.5) 10.31%,
+    rgba(46, 236, 197, 0.5) 165.09%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin font($fw: 400, $fs: 17px, $lh: 23px) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: calc($lh / $fs);
+}

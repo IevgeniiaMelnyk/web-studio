@@ -1,0 +1,101 @@
+.mobile-menu__open-btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.mobile-menu__open-btn::after {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  content: '';
+  width: 36px;
+  height: 34px;
+  background-image: url(/src/images/mobile-btn-opem.svg);
+}
+
+.mobile-menu__open-btn::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 36px;
+  height: 34px;
+  background-color: rgba(53, 166, 144, 0.2);
+  box-shadow: 0px 0px 25px rgba(53, 166, 144, 0.5);
+}
+
+.mobile-menu__close-btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+}
+
+.mobile-menu__close-btn::after {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  content: '';
+  width: 36px;
+  height: 34px;
+  background-image: url(/src/images/mobile-btn-close.svg);
+}
+
+.button {
+  width: 130px;
+  height: 40px;
+  border-radius: 41px;
+  border: solid 1.5px var(--button-border-color);
+  background-color: var(--button-color);
+  color: var(--text-color);
+  filter: drop-shadow(var(--drop-shadow));
+  @include font($fs: 11px, $lh: 15px);
+  transition: background-color 250ms var(--time-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--background-color);
+    outline: none;
+  }
+}
+
+.hero-button {
+  position: relative;
+  padding-right: 20px;
+}
+
+.button-label::after {
+  position: absolute;
+  top: 13px;
+  content: '';
+  margin-left: 10px;
+  width: 7px;
+  height: 12px;
+  background-image: url(/src/images/arrow-mobile-btn.svg);
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: 200px;
+    height: 57px;
+    border-radius: 49px;
+    border: solid 2px var(--button-border-color);
+    @include font($fs: 20px, $lh: 27px);
+  }
+
+  .hero-button {
+    padding-right: 20px;
+    @include font($fs: 19px, $lh: 22px);
+  }
+
+  .button-label::after {
+    top: 20px;
+    width: 9px;
+    height: 16px;
+    background-image: url(../images/arrow-btn.svg);
+  }
+}

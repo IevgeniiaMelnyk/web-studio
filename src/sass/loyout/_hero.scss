@@ -1,0 +1,127 @@
+@media screen and (max-width: 767px) {
+  .decor-line {
+    display: none;
+  }
+
+  .overlay {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(22, 22, 23, 0.3),
+        rgba(22, 22, 23, 0.3)
+      ),
+      url(/src/images/hero-bg-mobile.png);
+  }
+
+  .hero-title {
+    padding-top: 230px;
+    margin-bottom: 10px;
+    @include font($fw: 800, $fs: 27px, $lh: 32px);
+  }
+
+  .hero-title__secondary {
+    display: none;
+  }
+
+  .hero-text {
+    max-width: 218px;
+    margin-bottom: 20px;
+    @include font($fs: 13px, $lh: 17px);
+  }
+
+  .hero-text__mobil {
+    display: none;
+  }
+
+  .hero-question {
+    display: none;
+  }
+
+  .circles,
+  .hero-img {
+    display: none;
+  }
+
+  .circles-mobile {
+    position: absolute;
+    top: 299px;
+    left: 44%;
+  }
+
+  .hero-img-mobile {
+    position: absolute;
+    top: 230px;
+    left: 33%;
+  }
+}
+
+.hero-title,
+.hero-title__secondary {
+  @include title-color-activ();
+  filter: drop-shadow(var(--drop-shadow));
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+}
+
+.hero-text {
+  color: var(--text-color-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    position: relative;
+    width: 1927px;
+    height: 1060px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(22, 22, 23, 0.4),
+        rgba(22, 22, 23, 0.4)
+      ),
+      url(/src/images/hero-bg.png);
+  }
+
+  .hero-title {
+    padding-top: 335px;
+    @include font($fw: 800, $fs: 65px, $lh: 90px);
+  }
+
+  .hero-title__secondary {
+    @include font($fw: 800, $fs: 45px, $lh: 62px);
+    margin-bottom: 30px;
+  }
+
+  .hero-text {
+    max-width: 672px;
+    margin-bottom: 50px;
+    @include font($fs: 22px, $lh: 30px);
+  }
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-question {
+    margin-left: 30px;
+    color: rgba(255, 255, 255, 0.4);
+    @include font($fs: 19px, $lh: 25px);
+  }
+
+  .circles-mobile,
+  .hero-img-mobile {
+    display: none;
+  }
+
+  .circles {
+    position: absolute;
+    left: 1197px;
+    top: 334px;
+  }
+  .hero-img {
+    position: absolute;
+    left: 58%;
+    top: 20%;
+  }
+}
